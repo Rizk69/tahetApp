@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
           title: const Text(
             'Login',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+                fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),
           )),
       body: BlocProvider<ClickCountryCubit>(
         create: (context) => ClickCountryCubit(),
@@ -61,8 +61,8 @@ class LoginScreen extends StatelessWidget {
                   const Text(
                     'Welcome Back !',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -203,6 +203,7 @@ class LoginScreen extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.w400),
                         )),
+
                   ),
                 ]));
           },

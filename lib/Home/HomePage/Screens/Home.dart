@@ -32,9 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: AlignmentDirectional.center,
               children: [
                 const Positioned(
-                    child: const ImageIcon(
+                    child: ImageIcon(
                         color: Color(0XFF4B2771),
-                        AssetImage('lib/Asset/img.png'))),
+                        AssetImage('lib/Asset/Icons/svgexport-6 (28) 1.png'))),
                 Positioned(
                   top: 7,
                   right: 0,

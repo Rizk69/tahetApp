@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tahetapp/Home/HomePage/Screens/EditProfile.dart';
+import 'package:tahetapp/Home/HomePage/Screens/myAdsPage.dart';
 import 'package:tahetapp/Home/HomePage/Widget/FollowUs.dart';
+import 'package:tahetapp/Home/HomePage/Widget/Settings.dart';
 import 'package:tahetapp/Home/HomePage/Widget/WidgetDrawer.dart';
 
 class DrawerClick extends StatelessWidget {
@@ -56,15 +59,30 @@ class DrawerClick extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-                WidgetDrawer(
-                    named: 'Edit Profile',
-                    imagePath: 'lib/Asset/iconsprofile.png'),
-                WidgetDrawer(
-                    named: 'My Ads',
-                    imagePath: 'lib/Asset/Icons/svgexport-7 (3) 1.png'),
-                WidgetDrawer(
-                    named: 'Setting',
-                    imagePath: 'lib/Asset/Icons/svgexport-6 (32) 1.png'),
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context,EditProfile.routeName );
+                  },
+                  child: WidgetDrawer(
+                      named: 'Edit Profile',
+                      imagePath: 'lib/Asset/iconsprofile.png'),
+                ),
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context,MyAdsPage.routeName );
+                  },
+                  child: WidgetDrawer(
+                      named: 'My Ads',
+                      imagePath: 'lib/Asset/Icons/svgexport-7 (3) 1.png'),
+                ),
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context,Setting.routeName );
+                  },
+                  child: WidgetDrawer(
+                      named: 'Setting',
+                      imagePath: 'lib/Asset/Icons/svgexport-6 (32) 1.png'),
+                ),
                 Container(
                   margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),

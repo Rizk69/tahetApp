@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tahetapp/Home/HomePage/Screens/EditProfile.dart';
 import 'package:tahetapp/Home/HomePage/Screens/Home.dart';
+import 'package:tahetapp/Home/HomePage/Screens/myAdsPage.dart';
+import 'package:tahetapp/Home/HomePage/Widget/Settings.dart';
 
 import 'Home/SplashScreen/Splash.dart';
 
@@ -18,7 +21,10 @@ class MyApp extends StatelessWidget {
      initialRoute:SplashScreen.route ,
       routes: {
         SplashScreen.route: (_) => SplashScreen(),
-        HomeScreen.routeName:(_)=>HomeScreen()
+        HomeScreen.routeName:(_)=>HomeScreen(),
+        EditProfile.routeName:(_)=>EditProfile(),
+        MyAdsPage.routeName:(_)=>MyAdsPage(),
+        Setting.routeName:(_)=>Setting()
 
       },
     );
