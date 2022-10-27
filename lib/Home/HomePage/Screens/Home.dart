@@ -73,8 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child:DrawerClick()
 
       ),
+
       drawerEnableOpenDragGesture: true,
-      body: tabs[selectedindex],
+      body:  tabs[selectedindex],//HomeScreen(),
       bottomNavigationBar: BottomAppBar(
         elevation: 0.3,
         notchMargin: 8,
@@ -143,52 +144,19 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Color(0XFF4B2771),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(50))),
-        onPressed: () {},
+        onPressed: () {
+
+        },
         child: ImageIcon(
           AssetImage('lib/Asset/Vector (2).png'),
           size: 25,
         ),
+
       ),
     );
   }
 
   List<Widget> tabs = [HomeScreens(), HomeScreens()];
 
-  void onDrwerClick(BuildContext context) {
-    Drawer(
-      // Add a ListView to the drawer. This ensures the user can scroll
-      // through the options in the drawer if there isn't enough vertical
-      // space to fit everything.
-      child: ListView(
-        // Important: Remove any padding from the ListView.
-        padding: EdgeInsets.zero,
-        children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text('Drawer Header'),
-          ),
-          ListTile(
-            title: const Text('Item 1'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: const Text('Item 2'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
-        ],
-      ),
-    );
-  }
+
 }

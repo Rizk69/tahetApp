@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tahetapp/Home/Login_Page/Screens/Login_Screen.dart';
 import 'package:tahetapp/Home/Login_Page/Widget/Buttom_Items.dart';
 import 'package:tahetapp/Home/Login_Page/Widget/Countiner.dart';
 
-
 class Countries extends StatelessWidget {
+  static const String route = 'coun';
 
   @override
   Widget build(BuildContext context) {
@@ -31,38 +32,33 @@ class Countries extends StatelessWidget {
                   color: Color(0XFF4B2771),
                   fontWeight: FontWeight.bold,
                   decoration: TextDecoration.none,
-                  fontFamily: 'Poppins' ),
+                  fontFamily: 'Poppins'),
             ),
-            SizedBox(height: 6,),
-            Text('You can change country from settings',style: TextStyle(
-                fontSize: 18,
-                color: Color(0XFF0F1010
-                ),
-                fontWeight: FontWeight.w500,
-                decoration: TextDecoration.none,
-                fontFamily: 'Poppins')),
-            SizedBox(height: 40,),
+            SizedBox(
+              height: 6,
+            ),
+            Text('You can change country from settings',
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0XFF0F1010),
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Poppins')),
+            SizedBox(
+              height: 40,
+            ),
 
-            Counters(flagName: 'lib/Asset/Flag_of_Egypt.png',name: 'Egypt',),
-            SizedBox(height: 8,),
-            Counters(flagName: 'lib/Asset/Flag_of_Saudi_Arabia.png',name: 'Saudi Arabia',),
-            SizedBox(height: 8,),
-            Counters(flagName: 'lib/Asset/Flag.jpg',name: 'United Arab Emirates',),
-
-            SizedBox(height: 30,),
-            ButtomsItems(namedButtom:'confirm' ,color:Color(0XFFEA630B) ,callBack: (){},)
-
-
-
-
-
-
-
-
-
-
-
-
+            Counters(),
+            SizedBox(
+              height: 30,
+            ),
+            ButtomsItems(
+              namedButtom: 'confirm',
+              color: Color(0XFFEA630B),
+              callBack: () {
+                   Navigator.pushNamed(context, LoginScreen.route);
+              },
+            )
           ],
         ),
       ),

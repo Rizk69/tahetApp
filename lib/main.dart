@@ -3,6 +3,8 @@ import 'package:tahetapp/Home/HomePage/Screens/EditProfile.dart';
 import 'package:tahetapp/Home/HomePage/Screens/Home.dart';
 import 'package:tahetapp/Home/HomePage/Screens/myAdsPage.dart';
 import 'package:tahetapp/Home/HomePage/Widget/Settings.dart';
+import 'package:tahetapp/Home/Login_Page/Screens/Countries.dart';
+import 'package:tahetapp/Home/Login_Page/Screens/Login_Screen.dart';
 
 import 'Home/SplashScreen/Splash.dart';
 
@@ -24,7 +26,9 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName:(_)=>HomeScreen(),
         EditProfile.routeName:(_)=>EditProfile(),
         MyAdsPage.routeName:(_)=>MyAdsPage(),
-        Setting.routeName:(_)=>Setting()
+        Setting.routeName:(_)=>Setting(),
+        Countries.route:(_)=>Countries(),
+        LoginScreen.route:(_)=>LoginScreen()
 
       },
     );

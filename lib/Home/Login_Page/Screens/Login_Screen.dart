@@ -194,7 +194,8 @@ class LoginScreen extends StatelessWidget {
                               vertical: 15.0, horizontal: 20.0),
                         ),
                         onPressed: () {
-                          if (formKey.currentState!.validate()) {}
+                          // if (formKey.currentState!.validate()) {}
+                          Navigator.pushNamed(context, HomeScreen.routeName);
                         },
                         child: const Text(
                           'Login',

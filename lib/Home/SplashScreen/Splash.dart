@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tahetapp/Home/HomePage/Screens/Home.dart';
+import 'package:tahetapp/Home/Login_Page/Screens/Countries.dart';
+import 'package:tahetapp/Home/Login_Page/Screens/Login_Screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String route = 'splash';
@@ -14,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return HomeScreen();
+        return Countries();
       }));
     });
   }
